@@ -18,9 +18,11 @@
     }
 
     .container {
+      margin-top: 100px;
+      margin-left: 320px;
       max-width: 600px;
-      margin: 0 auto;
-      background-color: rgba(255, 255, 255, 0.7); /* Add an overlay to make text more readable */
+      /* margin: 0 auto; */
+      background-color: rgba(192, 192, 192, 0.7); /* Add an overlay to make text more readable */
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -60,7 +62,7 @@
 
     .stock-form button {
       padding: 10px 20px;
-      background-color: #4CAF50;
+      background-color: #505050;
       color: white;
       border: none;
       border-radius: 5px;
@@ -107,24 +109,29 @@
 <body>
   <div class="container">
     <h1>Manage Stocks</h1>
-    <div class="search-bar">
+    <!-- <div class="search-bar">
       <input type="text" id="search-bar" placeholder="Search Stocks">
-    </div>
+    </div> -->
     <div id="stock-forms">
       <div class="stock-form-1">
         <input type="text" class="product-name" required placeholder="Product Name">
         <input type="number" class="quantity"required placeholder="Quantity">
+        <input type="number" class="price"required placeholder="Price">
       </div>
 
     </div>
     <div class="stock-form">
       <button id="add-button" onclick="addStock()">Add Stock <i class="fas fa-plus"></i></button>
-      <button id="delete-button" onclick="deleteStock()" > Delete Stock <i class="fas fa-trash"></i></button>
-      <button id="add-new-button">Add New <i class="fas fa-plus-circle"></i></button>
+      <!-- <button id="delete-button" onclick="deleteStock()" > Delete Stock <i class="fas fa-trash"></i></button> -->
+      <button id="add-new-button">Add Multiple <i class="fas fa-plus-circle"></i></button>
     </div>
     <p id="error-message"></p>
+    <div>
     <ul id="watchlist"></ul>
-    <ul id="stock-list"></ul>
+  </div>
+  <div>
+  <ul id="stock-list"></ul>
+</div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>

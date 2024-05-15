@@ -25,7 +25,8 @@
   }
 
   form {
-    background-color: rgba(202, 178, 178, 0.7);
+    margin-left: -320px;
+    background-color: rgba(202, 199, 199, 0.7);
     padding: 30px; /* Increased padding */
     border-radius: 20px; /* Increased border-radius */
     max-width: 400px; /* Added max-width */
@@ -35,49 +36,57 @@
   label {
     display: block;
     margin-bottom: 10px;
-    color: #fff9f9;
+    color: #000000;
+    margin-left: 90px;
   }
 
   input[type="date"] {
+    margin-left: 90px;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
-    width: calc(100% - 20px); /* Adjusted width */
+    width: calc(50% - 20px); /* Adjusted width */
   }
 
   button[type="submit"] {
+    margin-left: 90px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: rgb(0, 0, 0);
+    background-color: #505050;
+    color: rgb(255, 255, 255);
     cursor: pointer;
-    width: 100%; /* Added width */
+    width: 50%; /* Added width */
   }
 
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #4591a0;
   }
 </style>
 </head>
 <body>
 
-<h2 style="margin-right: 20px;color:#333">Income Analysis</h2>
+<h2 style="margin-top: -390px;margin-left: 200px;color:#333">Income Analysis</h2>
 
 <form method="POST" action="/getIncome" >
-  <label for="fromDate">From Date:</label>
+  <label for="fromDate">From:</label>
   <!-- <input type="date" id="fromDate" name="fromDate"> -->
   <input type="date" id="fromDate" name="fromDate" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD">
   
+  <label for="fromDate">To:</label>
   <input type="date" id="toDate" name="toDate" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD">
   <!-- <label for="toDate">To Date:</label> -->
   <!-- <input type="date" id="toDate" name="toDate"> -->
-
-  <button type="submit">Search</button>
-  <div>
-    Total Income: 
-    <p id="totalIncome"><%= totalIncome %></p>
+  <br>
+  <br>
+  <button type="submit">Fetch</button>
+  <br>
+  <br>
+  <div style="margin-left: 90px;font-weight: bolder;background-color: honeydew;width: 50%;">
+ 
+    <center><p >Total Sales Income</p></center>
+    <center><p id="totalIncome"><%= totalIncome %></p></center>
   </div>
 </form>
 </body>

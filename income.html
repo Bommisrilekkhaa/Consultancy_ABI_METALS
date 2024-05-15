@@ -52,28 +52,29 @@
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
-    width: 100%; /* Added width */
+    width: 50%; /* Added width */
   }
 
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #505050;
   }
 </style>
 </head>
 <body>
 
-<h2>Income And Report Analysis</h2>
+<!-- <h2>Income And Report Analysis</h2> -->
 
 <form  method="POST" action="/getIncome">
-  <label for="fromDate">From Date:</label>
+  <label for="fromDate">From:</label>
   <!-- <input  type="date" id="fromDate" name="fromDate"> -->
   <input type="date" id="fromDate" name="fromDate" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD">
   
+  <label for="toDate">To:</label>
   <input type="date" id="toDate" name="toDate" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD">
   <!-- <label for="toDate">To Date:</label> -->
   <!-- <input type="date" id="toDate" name="toDate"> -->
 
-  <button type="submit">Search</button>
+  <button type="submit">Fetch</button>
 </form>
 <p id="totalIncome">0</p>
 </body>

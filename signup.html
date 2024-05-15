@@ -23,8 +23,9 @@
 
     .container {
       top: 70px;
+      /* height: */
       position: relative;
-      max-width: 400px;
+      max-width: 500px;
       margin: 50px auto 0; /* Adjusted margin: top 50px, center horizontally */
       background-color: rgba(167, 216, 219, 0.9);
       border-radius: 8px;
@@ -43,8 +44,9 @@
     
 
     .title {
-      color: #ff7f00; /* Orange color */
+      color: #565554; /* Orange color */
       font-size: 24px;
+      font-weight: bolder;
       /* margin-top: 20px; Add space above title */
     }
 
@@ -63,16 +65,16 @@
 
     input[type="text"],
     input[type="password"] {
-      width: 100%;
+      width: 50%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
 
     button {
-      width: 100%;
+      width: 25%;
       padding: 10px;
-      background-color: #007bff;
+      background-color: #202933;
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -85,9 +87,9 @@
     }
 
     .staff-button {
-      width: 100%;
+      width: 25%;
       padding: 10px;
-      background-color: #28a745; /* Green color */
+      background-color: #4c4d4c; /* Green color */
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -105,7 +107,9 @@
       <img src="logo.jpg" alt="Logo" class="logo">
       <div class="title">ABI METALS</div>
       <form class="sign-in-form" method="GET" action="/auth">
-        <h2>Sign In</h2>
+        <h2></h2>
+        <br>
+        <br>
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" id="username" name="username" required>

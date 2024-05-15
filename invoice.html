@@ -13,7 +13,7 @@
 
     header {
       padding: 20px;
-      background-color: #9b9b9b;
+      background-color: #505050;
       color: #fff;
     }
 
@@ -23,7 +23,7 @@
     }
 
     #goBack, #printInvoice, #addItem, #deleteItem,#downloadPdf {
-      background-color: #9b9b9b;
+      background-color: #505050;
       color: #fff;
       padding: 10px 20px;
       font-size: 16px;
@@ -108,6 +108,9 @@
     <div>
       <p>Customer Name: <input type="text" id="customerNameInput" value=""></p>
     </div>
+    <div>
+      <p>Customer PhNo: <input type="Number" id="customerNameInput" value=""></p>
+    </div>
     <div id="dateAndTime"></div>
   </div>
 
@@ -126,14 +129,14 @@
   </table>
 
   <div>
-    <button id="goBack">Go Back</button>
+    <!-- <button id="goBack">Go Back</button> -->
     <button id="printInvoice" onclick="addInvoice()">Save Invoice</button>
     <button id="downloadPdf" onclick="printInvoice()">Print Invoice</button>
     <button id="deleteItem" onclick="deleteItem()">Delete Item</button>
     <button id="addItem" onclick="addItem()">Add Item</button>
   </div>
   
-  <p id="totalPrice">Total Amount: ₹0.00</p>
+  <p id="totalPrice">Total Amount: ₹0.0</p>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   <script>
